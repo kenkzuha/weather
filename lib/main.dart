@@ -1,20 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:weather/container.dart';
 
 void main() {
   runApp(
-    MaterialApp(
-      home: Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Colors.cyan, Colors.black],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-          ),
-          child: Text("Hello World"),
-        ),
-      ),
+    const MaterialApp(
+      title: 'Weathering',
+      home: Scaffold(body: GradientContainer()),
     ),
   );
 }
