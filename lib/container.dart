@@ -1,26 +1,25 @@
 import 'package:flutter/material.dart';
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
-  
+  final Color color1;
+  final Color color2;
+
+  const GradientContainer(this.color1, this.color2, {super.key});
+
   @override
   Widget build(context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [
-            Color.fromARGB(255, 217, 213, 227),
-            Color.fromARGB(255, 0, 157, 255)
-          ],
+          colors: [color1,color2],
           begin: Alignment.topLeft,
           end: Alignment.bottomCenter,
         ),
       ),
       child: Container(
-        margin: const EdgeInsets.only(top: 50),
-        child: const Align(
-          alignment: Alignment.topCenter,
-          child: StyledText("Weathering"),
+        child: Align(
+          alignment: Alignment.center,
+          child: Image.asset('assets/images/one.png', width: 200),
         )
       )
     );
@@ -34,7 +33,7 @@ class StyledText extends StatelessWidget {
   @override
   Widget build(context) {
     return Text(text,
-        style: const TextStyle(color: Colors.white, fontSize: 28));
+        style: const TextStyle(color: Colors.black, fontSize: 28));
   }
 }
 

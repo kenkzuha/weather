@@ -5,9 +5,11 @@ void main() {
   runApp(
     const MaterialApp(
       title: 'Weathering',
-      /*Color.fromARGB(255, 217, 213, 227) */
-      /*Color.fromARGB(255, 0, 157, 255)*/
-      home: Scaffold(body: GradientContainer()),
-    ),
+      home: Scaffold(body: GradientContainer(
+            Color.fromARGB(255, 255, 255, 255),
+            Color.fromARGB(255, 0, 157, 255)
+        ),
+      ),
+    )
   );
 }
